@@ -72,16 +72,16 @@ body {
 
 .scroll__line {
     opacity: .25;
-    width: 1px;
+    width: 0.08vw;
     height: 25.417vw;
-    border: 1px solid #cccccc;
+    border: 0.08vw solid #cccccc;
     margin-bottom: 2vw;
 }
 
 .header__inner {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #b9b9b9;
+    border-bottom: 0.08vw solid #b9b9b9;
     padding: 1.04vw 0;
     margin-right: 7.19vw;
 }
@@ -95,6 +95,7 @@ body {
     width: 11.09vw;
     height: 2.60vw;
 }
+
 .header__geo-link {
     position: relative;
 }
@@ -166,6 +167,10 @@ body {
     margin-left: 0.31vw;
 }
 
+.header__menu {
+    display: none;
+}
+
 ._contact {
     display: flex;
     align-items: center;
@@ -233,13 +238,14 @@ body {
 
 .section__title {
     background-image: url('../img/bg/bg.png');
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
-    height: 50.1vw;
 }
 
 .section__title::before {
@@ -248,8 +254,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 50.1vw;
+    height: 100%;
     background-image: url('../img/bg/liner.png');
     background-size: cover;
     background-position: center top;
@@ -263,8 +268,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 50.1vw;
+    height: 100%;
     background-image: url('../img/bg/liner2.png');
     background-size: cover;
     background-position: center top;
@@ -407,6 +411,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-left: 5.99vw;
+    margin-top: 6.51vw;
 }
 
 .quiz__item:not(:last-child) {
@@ -534,7 +539,7 @@ body {
     line-height: 1.25vw;
     letter-spacing: 0.04em;
     color: #FFFFFF;
-    margin:0 0 1.30vw 0;
+    margin: 0 0 1.30vw 0;
 }
 
 .checkbox {
@@ -545,7 +550,7 @@ body {
     text-align: left;
 }
 
-.checkbox p, a{
+.checkbox p, a {
     font-size: 0.73vw;
     line-height: 0.99vw;
 }
@@ -743,18 +748,6 @@ body {
         letter-spacing: 0.15em;
     }
 
-    .section__title {
-        height: 96.1rem;
-    }
-
-    .section__title::before {
-        height: 96.1rem;
-    }
-
-    .section__title::after {
-        height: 96.1rem;
-    }
-
     .title {
         margin-top: 12.8rem;
         margin-left: 11.5rem;
@@ -931,39 +924,90 @@ body {
         border-width: 0 0.2rem 0.2rem 0;
     }
 }
+
 @media (max-width: 375px) {
-    .header__logo p,.header__geo, .nav, .header__geo-link, .header__calc-price, .header__social {
+    .header__logo p, .header__geo, .nav, .header__geo-link, .header__calc-price, .header__social {
         display: none;
     }
+
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 7;
+    }
+
+    .header__logo img {
+        width: 9.2rem;
+        height: 2.2rem;
+    }
+
     .header__inner {
         width: 100%;
+        border: none;
+        align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
+
+    .header__contact-text {
+        color: #FFFFFF;
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+
+    .header__menu {
+        display: block;
+    }
+
+    .contact__phone a {
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        line-height: 1rem;
+    }
+
+    .contact__call a {
+        font-size: 0.6rem;
+        line-height: 2.1rem;
+        color: #FFFFFF;
+    }
+
     .title {
         width: 100%;
-        margin: 0;
+        margin: 12.5rem 0 0 0;
     }
+
     .title__text {
         font-size: 2rem;
         line-height: 2.9rem;
+        margin-left: 2rem;
     }
+
     .title p {
         font-size: 1.2rem;
         line-height: 1.8rem;
+        margin-top: 2.8rem;
+        margin-left: 2rem;
     }
+
     .title__call {
         flex-direction: column;
+        margin-top: 2.8rem;
+        align-items: flex-start;
+        margin-left: 2rem;
     }
+
     .title__link {
         width: 27.6rem;
         height: 6rem;
-        margin: 0;
         padding: 0;
         text-align: center;
+        margin: 0 0 1.5rem 0;
     }
 
     .title__link a {
         width: 100%;
     }
+
     .title__phone {
         width: 27.6rem;
         height: 6rem;
@@ -979,12 +1023,32 @@ body {
     .title__link svg, .title__phone svg {
         display: none;
     }
+
     ._link__text {
         font-size: 1rem;
         line-height: 1.5rem;
     }
+
     .quiz__container {
         width: 100%;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 15px;
+        margin: 4rem 0 0 0;
+        padding: 0 2rem 0 2rem;
     }
+    .quiz {
+        margin: 0;
+    }
+
+    .quiz p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .quiz__item:not(:last-child) {
+        border: none;
+    }
+
 }
