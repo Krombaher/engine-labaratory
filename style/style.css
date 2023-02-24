@@ -947,6 +947,7 @@ body {
         align-items: center;
         padding-left: 2rem;
         padding-right: 2rem;
+        justify-content: space-evenly
     }
 
     .header__contact-text {
@@ -1004,6 +1005,11 @@ body {
         margin: 0 0 1.5rem 0;
     }
 
+    .modal__input {
+        width: 27.6rem;
+        height: 6rem;
+    }
+
     .title__link a {
         width: 100%;
     }
@@ -1049,6 +1055,17 @@ body {
 
     .quiz__item:not(:last-child) {
         border: none;
+    }
+
+    .modal__title h2 {
+        font-size: 3rem;
+    }
+    .checkbox {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .checkmark {
+        top: -2.5rem;
     }
 
 }
