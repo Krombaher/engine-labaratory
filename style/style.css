@@ -81,9 +81,9 @@ body {
 .header__inner {
     display: flex;
     justify-content: space-between;
-    width: 85.52vw;
     border-bottom: 1px solid #b9b9b9;
     padding: 1.04vw 0;
+    margin-right: 7.19vw;
 }
 
 .header__logo a {
@@ -118,11 +118,25 @@ body {
     position: absolute;
     width: 15.63vw;
     height: 15.63vw;
-    top: 4.17vw;
+    top: 3vw;
     left: 0;
     z-index: 3;
     border-radius: 0.52vw;
 }
+
+/*.map__full {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    position: absolute;*/
+/*    top: 3vw;*/
+/*    left: -700px;*/
+/*    z-index: 5;*/
+/*    width: 1500px;*/
+/*    height: 900px;*/
+/*    overflow: hidden;*/
+/*    background-color: rgba(64, 64, 65, 0.6);*/
+/*}*/
 
 ._svg {
     width: 1.82vw;
@@ -200,7 +214,7 @@ body {
 .nav__inner {
     display: flex;
     justify-content: space-between;
-    width: 85.52vw;
+    margin-right: 7.19vw;
     padding: 1.20vw 0;
 }
 
@@ -219,7 +233,6 @@ body {
 
 .section__title {
     background-image: url('../img/bg/bg.png');
-    /*background-image: url('../img/header/bg.png');*/
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -368,6 +381,7 @@ body {
     width: 20.83vw;
     height: 5.21vw;
     padding-left: 1.61vw;
+    background-color: hsla(0, 0%, 5%, 0.64);
 }
 
 .title__phone:hover {
@@ -391,12 +405,12 @@ body {
 .quiz__container {
     display: flex;
     justify-content: space-between;
-    width: 79.38vw;
+    flex-wrap: wrap;
     margin-left: 5.99vw;
 }
 
 .quiz__item:not(:last-child) {
-    border-right: 1px solid #FFFFFF;
+    border-right: 0.07vw solid #FFFFFF;
 }
 
 .quiz {
@@ -422,6 +436,13 @@ body {
     color: #FFFFFF;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .modal {
     display: flex;
     justify-content: center;
@@ -429,7 +450,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1050;
+    z-index: 5;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -601,3 +622,369 @@ body {
     display: none;
 }
 
+@media (max-width: 992px) {
+    html {
+        font-size: 10px;
+    }
+
+    ._text {
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+
+    ._link {
+        font-size: 1.1rem;
+        line-height: 1.5rem;
+    }
+
+    .container__right {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+    .header__inner {
+        border-bottom: 0.1rem solid #b9b9b9;
+        padding: 2rem 0;
+        margin-right: 13.8rem;
+    }
+
+    .header__logo a {
+        margin-right: 2.3rem;
+    }
+
+    .logo__img img {
+        width: 21.2rem;
+        height: 5rem;
+    }
+
+    .header__geo svg {
+        margin-right: 1rem;
+    }
+
+    .header__geo-link svg {
+        margin-right: 1rem;
+        width: 1.2rem;
+        height: 1.5rem;
+    }
+
+    .geo__map {
+        width: 30rem;
+        height: 30rem;
+        top: 5.7rem;
+        left: 0;
+        z-index: 3;
+        border-radius: 1rem;
+    }
+
+    ._svg {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .header__calc-price svg {
+        margin-right: 1rem;
+    }
+
+    .header__social p {
+        margin-right: 1.8rem;
+    }
+
+    .header__social svg {
+        margin-right: 0.6rem;
+    }
+
+    .header__contact-text {
+        margin-left: 0.6rem;
+    }
+
+    ._contact {
+        margin-bottom: 0.6rem;
+    }
+
+    .contact__phone a {
+        font-size: 2rem;
+        line-height: 1rem;
+    }
+
+    .contact__phone svg {
+        margin-left: 0.4rem;
+    }
+
+    .contact__call svg {
+        margin-left: 0.4rem;
+    }
+
+    .dot__link:after {
+        top: 2rem;
+        border-bottom: 0.3rem dotted #ea4036;
+    }
+
+    .dot__link:hover:after {
+        width: 7rem;
+    }
+
+    .calc__dot:after {
+        top: 3.5rem;
+    }
+
+    .nav__inner {
+        padding: 2.3rem 0;
+        margin-right: 13.8rem;
+    }
+
+    .nav__item a {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: 0.15em;
+    }
+
+    .section__title {
+        height: 96.1rem;
+    }
+
+    .section__title::before {
+        height: 96.1rem;
+    }
+
+    .section__title::after {
+        height: 96.1rem;
+    }
+
+    .title {
+        margin-top: 12.8rem;
+        margin-left: 11.5rem;
+        width: 101.1rem;
+    }
+
+    .title__text {
+        font-size: 6.5rem;
+        line-height: 9.5rem;
+    }
+
+    .title p {
+        margin-top: 4.5rem;
+        font-size: 2.7rem;
+        line-height: 4.5rem;
+    }
+
+    .title__call {
+        margin-top: 4.5rem;
+    }
+
+    .title__link {
+        border-radius: 50rem;
+        width: 40rem;
+        height: 10rem;
+        padding-left: 5.4rem;
+        margin-right: 2.2rem;
+    }
+
+    .title__link:after {
+        width: 2rem;
+        height: 50rem;
+        margin-left: 5rem;
+        left: -4rem;
+        top: -10rem;
+    }
+
+    @keyframes movingFlare {
+        0% {
+            left: -3rem;
+            margin-left: 0;
+        }
+        30% {
+            left: 110%;
+            margin-left: 8rem;
+        }
+        100% {
+            left: 110%;
+            margin-left: 8rem;
+        }
+    }
+
+    .title__link svg {
+        margin-left: 2.5rem;
+        width: 2.3rem;
+        height: 2.3rem;
+    }
+
+    .title__phone {
+        border: 0.2rem solid #FFFFFF;
+        border-radius: 50rem;
+        width: 40rem;
+        height: 10rem;
+        padding-left: 3.9rem;
+    }
+
+    .title__phone:hover {
+        border: 0.3rem solid #FFFFFF;
+    }
+
+    .title__phone svg {
+        margin-right: 1.2rem;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    ._link__text {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    .quiz__container {
+        margin-left: 11.5rem;
+    }
+
+    .quiz__item:not(:last-child) {
+        border-right: 0.1rem solid #FFFFFF;
+    }
+
+    .quiz {
+        margin-right: 9.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .quiz svg {
+        width: 1.4rem;
+        height: 1rem;
+        margin-bottom: 2.2rem;
+    }
+
+    .quiz p {
+        font-size: 1.7rem;
+        line-height: 2.7rem;
+    }
+
+    .modal__content {
+        width: 50rem;
+        height: 60rem;
+        padding-top: 4.5rem;
+    }
+
+    .modal__content label {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
+
+    .modal__close {
+        top: 1rem;
+        right: 3rem;
+        font-size: 5.5rem;
+    }
+
+    .modal__input {
+        width: 36.3rem;
+        height: 8.5rem;
+        border-radius: 7.3rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .modal__title h2 {
+        font-size: 3.2rem;
+        line-height: 4.4rem;
+        margin-bottom: 1.6rem;
+    }
+
+    .modal__title p {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        margin-bottom: 3.4rem;
+    }
+
+    .modal__btn {
+        width: 36.3rem;
+        height: 8.5rem;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        margin: 0 0 2.5rem 0;
+    }
+
+    .checkbox p, a {
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+    }
+
+    .container {
+        padding-left: 3.5rem;
+        font-size: 2.2rem;
+    }
+
+    .checkmark {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 0.5rem;
+    }
+
+    .container .checkmark:after {
+        left: 0.59rem;
+        top: 0.3rem;
+        width: 0.5rem;
+        height: 0.8rem;
+        border-width: 0 0.2rem 0.2rem 0;
+    }
+}
+@media (max-width: 375px) {
+    .header__logo p,.header__geo, .nav, .header__geo-link, .header__calc-price, .header__social {
+        display: none;
+    }
+    .header__inner {
+        width: 100%;
+    }
+    .title {
+        width: 100%;
+        margin: 0;
+    }
+    .title__text {
+        font-size: 2rem;
+        line-height: 2.9rem;
+    }
+    .title p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+    .title__call {
+        flex-direction: column;
+    }
+    .title__link {
+        width: 27.6rem;
+        height: 6rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .title__link a {
+        width: 100%;
+    }
+    .title__phone {
+        width: 27.6rem;
+        height: 6rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .title__phone a {
+        width: 100%;
+    }
+
+    .title__link svg, .title__phone svg {
+        display: none;
+    }
+    ._link__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+    .quiz__container {
+        width: 100%;
+        flex-direction: column;
+    }
+}
