@@ -1058,7 +1058,7 @@ body {
     }
 
     .modal__title h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     .checkbox {
         flex-direction: column;
@@ -1070,5 +1070,20 @@ body {
     .title__phone-span {
         color: #05e105;
     }
+    .modal__content {
+        height: 45rem;
+    }
+    .modal__content {
+        padding-top: 3rem;
+    }
+    .modal__close {
+        font-size: 4rem;
+    }
+    .modal__title br {
+        display: none;
+    }
 
+    .modal__title p {
+        font-size: 1.6rem;
+    }
 }
