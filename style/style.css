@@ -920,7 +920,7 @@ body {
 
 @media (max-width: 375px) {
 
-    .header__logo p, .header__geo, .nav, .header__geo-link, .header__calc-price, .header__social {
+    .header__logo p, .header__geo, .header__geo-link, .nav, .header__calc-price, .header__social {
         display: none;
     }
 
@@ -936,6 +936,12 @@ body {
 
     .mobile {
         display: none;
+    }
+
+    .header__geo-link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
     }
     .mobile__inner {
         margin-top: 12rem;
@@ -1033,7 +1039,7 @@ body {
 
     .title {
         width: 100%;
-        margin: 12.5rem 0 0 0;
+        margin: 10rem 0 0 0;
     }
 
     .title__text {
