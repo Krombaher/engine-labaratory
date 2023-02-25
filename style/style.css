@@ -19,6 +19,10 @@ body {
 
 }
 
+.mobile {
+    display: none;
+}
+
 ._text {
     font-weight: 400;
     font-size: 0.57vw;
@@ -612,10 +616,6 @@ body {
     transform: rotate(35deg);
 }
 
-.mobile {
-    display: none;
-}
-
 .show {
     display: flex;
 }
@@ -931,7 +931,7 @@ body {
     }
 
     .mobile {
-        display: flex;
+        display: none;
         flex-direction: column;
     }
 
@@ -972,10 +972,6 @@ body {
 
     .nav__inner li {
         margin-bottom: 2.8rem;
-    }
-
-    .mobile {
-        display: block;
     }
 
     .header {
@@ -1099,11 +1095,15 @@ body {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(1, 1fr);
         grid-column-gap: 15px;
-        margin: 4rem 0 0 0;
+        margin: 3rem 0 0 0;
         padding: 0 2rem 0 2rem;
     }
     .quiz {
         margin: 0;
+    }
+    .quiz svg {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .quiz p {
