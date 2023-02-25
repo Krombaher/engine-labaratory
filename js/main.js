@@ -4,6 +4,8 @@ const viewModal = document.getElementById('modalOpen')
 const menu = document.querySelector('.toggle__menu')
 const sectionTitle = document.querySelector('.section__title')
 const nav = document.querySelector('.nav')
+const headerContactText = document.querySelector('.header__contact-text')
+const mobileInfo = document.querySelector('.mobile')
 console.log(sectionTitle)
 
 //Map
@@ -44,8 +46,11 @@ function openMenu() {
     if(sectionTitle.style.display === 'flex') {
         sectionTitle.style.display = 'none'
         nav.style.display = 'block'
+        headerContactText.style.color = '#2A2A2A'
+        mobileInfo.style.display = 'flex'
     } else {
         sectionTitle.style.display = 'flex'
         nav.style.display = 'none'
+        mobileInfo.style.display = 'none'
     }
 }
