@@ -238,11 +238,11 @@ body {
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
+    max-height: 100vh;
 }
 
 .section__title::before {
@@ -624,7 +624,7 @@ body {
     display: none;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     html {
         font-size: 10px;
     }
@@ -915,6 +915,250 @@ body {
         width: 0.5rem;
         height: 0.8rem;
         border-width: 0 0.2rem 0.2rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__logo p, .header__geo, .header__geo-link, .nav, .header__calc-price, .header__social {
+        display: none;
+    }
+
+    .nav__inner {
+        width: 100%;
+        margin: 0 2rem 0 2rem;
+        padding: 0;
+    }
+
+    .section__title {
+        display: flex;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .header__geo-link {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    .mobile__inner {
+        margin-top: 12rem;
+    }
+    ._mobile {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3rem;
+        margin-left: 2rem;
+    }
+    .header__geo-mobile svg, .header__calc-mobile svg {
+        width: 6.5rem;
+        height: 6.5rem;
+        margin-right: 1.8rem;
+    }
+
+    .header__social-mobile {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2rem;
+    }
+    .header__socials-items {
+        margin-left: 8rem;
+    }
+
+    ._info {
+        display: flex;
+        align-items: center;
+    }
+
+    ._info img {
+        margin-right: 1.8rem;
+    }
+
+    .nav__item a {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+    }
+
+    .nav__inner li {
+        margin-bottom: 2.8rem;
+    }
+
+    .header {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 7;
+    }
+
+    .header__inner {
+        width: 100%;
+        border: none;
+        align-items: center;
+        justify-content: space-evenly
+    }
+
+    .header__contact-text {
+        color: #FFFFFF;
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+
+    .toggle__menu {
+        display: grid !important;
+        height: min-content;
+        cursor: pointer;
+        width: 2rem;
+    }
+
+    .toggle__menu .bar {
+        width: 2rem;
+        height: 0.2rem;
+        margin-bottom: 0.5rem;
+        background: #FFFFFF;
+        border-radius: 10%;
+        transition: .4s;
+    }
+
+    .contact__phone a {
+        color: #FFFFFF;
+        font-size: 1.2rem;
+        line-height: 1rem;
+    }
+
+    .contact__call a {
+        font-size: 0.6rem;
+        line-height: 2.1rem;
+        color: #FFFFFF;
+    }
+
+    .title {
+        width: 100%;
+        margin: 10rem 0 0 0;
+    }
+
+    .title__text {
+        font-size: 3rem;
+        line-height: 4rem;
+        margin-left: 2rem;
+    }
+
+    .title p {
+        font-size: 2.2rem;
+        line-height: 1.8rem;
+        margin-top: 2.8rem;
+        margin-left: 2rem;
+    }
+
+    .title__call {
+        margin-top: 2.8rem;
+        align-items: flex-start;
+        margin-left: 2rem;
+    }
+
+    .title__link {
+        width: 27.6rem;
+        height: 6rem;
+        padding: 0;
+        text-align: center;
+        margin: 0 1.5rem 1.5rem 0;
+    }
+
+    .modal__input {
+        width: 27.6rem;
+        height: 6rem;
+    }
+
+    .title__link a {
+        width: 100%;
+    }
+
+    .title__phone {
+        width: 27.6rem;
+        height: 6rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .title__phone a {
+        width: 100%;
+    }
+
+    .title__link svg, .title__phone svg {
+        display: none;
+    }
+
+    ._link__text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .quiz__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 15px;
+        margin: 3rem 0 2rem 0;
+        padding: 0 2rem 0 2rem;
+    }
+    .quiz {
+        margin: 0;
+    }
+    .quiz svg {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .quiz p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .quiz__item:not(:last-child) {
+        border: none;
+    }
+
+    .modal__title h2 {
+        font-size: 2rem;
+    }
+    .checkbox {
+        flex-direction: column;
+        margin-top: 2rem;
+    }
+    .checkmark {
+        top: -2.5rem;
+    }
+    .title__phone-span {
+        color: #05e105;
+    }
+    .modal__content {
+        height: 45rem;
+    }
+    .modal__content {
+        padding: 3rem 1rem 0 1rem;
+    }
+    .modal__close {
+        font-size: 4rem;
+    }
+    .modal__title br {
+        display: none;
+    }
+
+    .modal__title p {
+        font-size: 1.6rem;
+    }
+    .nav__inner {
+        flex-direction: column;
+    }
+    .main__inner-mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    .header__mobile {
+        display: flex;
+        align-items: center;
     }
 }
 
